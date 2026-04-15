@@ -12,8 +12,7 @@ from database import Base, get_db, engine
 from schema import TodoCreate, TodoOut, TodoUpdate, Token, Token, UserCreate, UserOut
 
 
-Base.metadata.create_all(bind=engine)
-api_router = APIRouter(prefix='/api/')
+api_router = APIRouter(prefix='/api')
 
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
